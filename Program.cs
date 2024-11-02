@@ -9,23 +9,22 @@ namespace NewC_2_9
             Random random = new Random();
 
             int minRandom = 10;
-            int maxRandom = 26;
+            int maxRandom = 25;
             int lowerLimitSearch = 50;
             int upperLimitSearch = 150;
             int quantityNumbers = 0;
             int numberSearch=0;
 
-            int numberN = random.Next(minRandom, maxRandom);
+            int numberN = random.Next(minRandom, maxRandom+1);
 
-            for (int i = 0;numberSearch<=lowerLimitSearch; i++)
+            for (int i = 0; i <= upperLimitSearch; i+= numberN)
             {
-                numberSearch += numberN;
-            }
+                numberSearch = i;
 
-            for (int i = 0; numberSearch<=upperLimitSearch; i++)
-            {
-                numberSearch += numberN;
-                quantityNumbers++;
+                if (numberSearch >= lowerLimitSearch)
+                {
+                    quantityNumbers++;
+                }
             }
 
             Console.WriteLine($"Число N - {numberN}, Количество чисел в диапозоне от {lowerLimitSearch} до {upperLimitSearch} кратных N - {quantityNumbers}");
