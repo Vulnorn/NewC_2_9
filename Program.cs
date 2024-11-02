@@ -13,7 +13,7 @@ namespace NewC_2_9
             int lowerLimitSearch = 50;
             int upperLimitSearch = 150;
             int quantityNumbers = 0;
-            int numberSearch=0;
+            int numberSearch;
 
             int numberN = random.Next(minRandom, maxRandom+1);
 
